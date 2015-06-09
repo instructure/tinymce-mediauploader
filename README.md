@@ -72,6 +72,11 @@ This is used as the message providing instruction when the plugin widget is rend
 
 This is the placeholder used for the text input that handle pasting a media url. The default is `"Paste URL"`.
 
+#### `mediauploader_msg_drag_drop`
+
+This is the message instructing user how to upload a file. The default is `"Drag and drop or *Upload a File*"`.
+**Note:** Text within * will be wrapped in markup to activate file input
+
 #### `mediauploader_msg_invalid_file`
 
 This is the message that appears if the user attempts to upload an invalid media file. The default is `"That doesn't appear to be an accepted media file"`.
