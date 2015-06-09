@@ -21,6 +21,9 @@ tinymce.init({
     */
   mediauploader_upload_file: function (widget, file, callback) {
     widget.innerHTML = 'Uploading...';
+
+    // Do your upload logic here instead of setTimeout
+
     setTimeout(function () {
       /**
         * Callback to let plugin know the upload is complete
