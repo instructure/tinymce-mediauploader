@@ -10,8 +10,6 @@ tinymce.init({
   plugins: 'link mediauploader',
   toolbar: 'bold italic bullist numlist link mediauploader',
 
-  // plugin specific options
-
   /**
     * Handle a file being uploaded by the plugin
     *
@@ -35,9 +33,53 @@ tinymce.init({
     }, 2500);
   },
 
-  // custom messages to support i18n, defaults will be used if no custom message is provided
-  mediauploader_msg_invalid_file: "That file type isn't supported",
-  mediauploader_msg_invalid_url: "That's a bad URL",
-  mediauploader_msg_invalid_media: "That can't be embeded"
+  // Path to CSS file to customize plugin widget appearance
+  mediauploader_style_url: '/path/to/style.css'
 });
 ```
+
+## Options
+
+#### `mediauploader_upload_file`
+
+**Required**
+
+This is the `function` that will handle files that need to be uploaded. See the example above for signature, and usage.
+
+#### `mediauploader_style_url`
+
+**Required**
+
+No styling is provided automatically. A default stylesheet is provided under `lib/styles.css`, or you may customize your own theme.
+
+#### `mediauploader_button_image`
+
+This is the url of an image to be used as the toolbar button for the plugin.
+
+#### `mediauploader_button_title`
+
+This is the title of the toolbar button which is displayed as a tooltip on hover.
+
+#### `mediauploader_button_text`
+
+This is the text of the toolbar button. If text and image options are provided, text will take precedence.
+
+#### `mediauploader_msg_add_media`
+
+This is used as the message providing instruction when the plugin widget is rendered. The default is `"Add a video, image, or audio file"`.
+
+#### `mediauploader_msg_paste_url`
+
+This is the placeholder used for the text input that handle pasting a media url. The default is `"Paste URL"`.
+
+#### `mediauploader_msg_invalid_file`
+
+This is the message that appears if the user attempts to upload an invalid media file. The default is `"That doesn't appear to be an accepted media file"`.
+
+#### `mediauploader_msg_invalid_url`
+
+This is the message that appears if the user attempts to paste an invalid URL. The default is `"That doesn't appear to be a URL"`.
+
+#### `mediauploader_msg_invalid_media`
+
+This is the message that appears if the user attempts to embed an unsupported media type. The default is `"That doesn't appear to be an embeddable URL"`.
