@@ -34,7 +34,7 @@ tinymce.init({
   },
 
   // Path to CSS file to customize plugin widget appearance
-  mediauploader_style_url: '/path/to/style.css'
+  mediauploader_style_url: '//example.com/path/to/style.css'
 });
 ```
 
@@ -50,7 +50,7 @@ This is the `function` that will handle files that need to be uploaded. See the 
 
 **Required**
 
-No styling is provided automatically. A default stylesheet is provided under `lib/styles.css`, or you may customize your own theme.
+No styling is provided automatically. A default stylesheet is provided under `lib/styles.css`, or you may customize your own theme. This URL is rendered in an iframe, so it must be a fully qualified URL.
 
 #### `mediauploader_button_image`
 
