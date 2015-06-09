@@ -1,43 +1,62 @@
 <!doctype html>
 <meta charset="utf-8"/>
 <title>TinyMCE Media Uploader Plugin</title>
-<link rel="stylesheet" type="text/css" href="styles.css" id="media-uploader-styles">
 <style type="text/css">
   html {
     background: rgb(244, 244, 244);
   }
 
   body {
+    font-family: 'Avenir', Tahoma, sans-serif;
     margin: 0 auto;
     width: 750px;
   }
 
-  /* .mce-tinymce { */
-  /*   border: 0 none !important; */
-  /*   box-shadow: 0px 0px 20px rgba(0,0,0,0.2); */
-  /* } */
-  /*  */
-  /* .mce-toolbar-grp { */
-  /*   padding: 8px 0 !important; */
-  /*   background: #fff !important; */
-  /*   border: 1px solid rgb(232, 235, 241) !important; */
-  /*   border-left-width: 0 !important; */
-  /*   border-right-width: 0 !important; */
-  /* } */
-  /*  */
-  /* .mce-edit-area { */
-  /*   border: 0 none !important; */
-  /* } */
+  #wrapper {
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    padding: 11px 32px 32px 32px;
+    margin-top: 50px;
+  }
+
+  .mce-tinymce {
+    border: 0 none !important;
+  }
+
+  .mce-toolbar-grp {
+    padding: 7px 0 !important;
+    background: #fff !important;
+    border: 1px solid rgb(232, 235, 241) !important;
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+  }
+
+  .mce-edit-area {
+    border: 0 none !important;
+  }
+
+  .mce-btn-group .mce-btn {
+    background: none !important;
+    border: 0 none !important;
+    box-shadow: none !important;
+  }
+
+  .mce-btn button {
+    width: 40px !important;
+    height: 40px !important;
+  }
 </style>
 <body>
-  <h1>TinyMCE Media Uploader Plugin</h1>
-  <textarea></textarea>
+  <div id="wrapper">
+    <h1>TinyMCE Media Uploader Plugin</h1>
+    <textarea></textarea>
+  </div>
   <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
   <script src="../lib/index.js"></script>
   <script>
     tinymce.init({
-      height: 570,
-      width: 750,
+      height: 500,
+      width: 686,
       selector: 'textarea',
       statusbar: false,
       menubar: false,
@@ -49,8 +68,6 @@
           callback('https://pbs.twimg.com/profile_images/2221189782/beavis_butthead.jpg');
         }, 2500);
       },
-      mediauploader_msg_invalid_file: "That file type isn't supported",
-      mediauploader_msg_invalid_url: "That's a bad URL",
-      mediauploader_msg_invalid_media: "That can't be embeded"
+      mediauploader_style_url: '//127.0.0.1:3030/lib/styles.css'
     });
   </script>
