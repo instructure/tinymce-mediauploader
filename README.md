@@ -2,6 +2,10 @@
 
 Media Uploader plugin for TinyMCE
 
+## Demo
+
+http://mzabriskie.github.io/tinymce-mediauploader
+
 ## Example
 
 ```js
