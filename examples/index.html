@@ -43,8 +43,11 @@
       menubar: false,
       plugins: 'link mediauploader',
       toolbar: 'bold italic bullist numlist link mediauploader',
-      mediauploader_upload_file: function (file, callback) {
-        callback('https://pbs.twimg.com/profile_images/2221189782/beavis_butthead.jpg');
+      mediauploader_upload_file: function (widget, file, callback) {
+        widget.innerHTML = 'Uploading...';
+        setTimeout(function () {
+          callback('https://pbs.twimg.com/profile_images/2221189782/beavis_butthead.jpg');
+        }, 2500);
       },
       mediauploader_msg_invalid_file: "That file type isn't supported",
       mediauploader_msg_invalid_url: "That's a bad URL",
