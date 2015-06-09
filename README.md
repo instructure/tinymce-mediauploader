@@ -75,6 +75,7 @@ This is the placeholder used for the text input that handle pasting a media url.
 #### `mediauploader_msg_drag_drop`
 
 This is the message instructing user how to upload a file. The default is `"Drag and drop or *Upload a File*"`.
+
 **Note:** Text within * will be wrapped in markup to activate file input
 
 #### `mediauploader_msg_invalid_file`
