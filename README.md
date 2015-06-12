@@ -50,6 +50,10 @@ tinymce.init({
 
 This is the `function` that will handle files that need to be uploaded. See the example above for signature, and usage.
 
+#### `mediauploader_embed_media`
+
+This `function` is called anytime media is embeded into the editor. It takes the media `element` as it's only argument.
+
 #### `mediauploader_style_url`
 
 **Required**
