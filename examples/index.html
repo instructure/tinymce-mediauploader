@@ -69,6 +69,9 @@
           callback('https://pbs.twimg.com/profile_images/2221189782/beavis_butthead.jpg');
         }, 1000);
       },
-      mediauploader_style_url: '//127.0.0.1:3030/lib/styles.css'
+      mediauploader_style_url: '//127.0.0.1:3030/lib/styles.css',
+      mediauploader_embed_media: function (media) {
+        console.log(media);
+      }
     });
   </script>
