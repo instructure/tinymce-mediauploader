@@ -14,6 +14,12 @@ tinymce.init({
   plugins: 'link mediauploader',
   toolbar: 'bold italic bullist numlist link mediauploader',
 
+  // Path to CSS file to customize plugin widget appearance, see 
+  // `lib/styles.css` for available selectors and example styling
+  //
+  // http://www.tinymce.com/wiki.php/Configuration:content_css for more info
+  content_css: '//example.com/path/to/style.css'
+
   /**
     * Handle a file being uploaded by the plugin
     *
@@ -35,10 +41,7 @@ tinymce.init({
         */
       callback('https://pbs.twimg.com/profile_images/2221189782/beavis_butthead.jpg');
     }, 2500);
-  },
-
-  // Path to CSS file to customize plugin widget appearance
-  mediauploader_style_url: '//example.com/path/to/style.css'
+  }
 });
 ```
 
@@ -53,12 +56,6 @@ This is the `function` that will handle files that need to be uploaded. See the 
 #### `mediauploader_embed_media`
 
 This `function` is called anytime media is embeded into the editor. It takes the media `element` as it's only argument.
-
-#### `mediauploader_style_url`
-
-**Required**
-
-No styling is provided automatically. A default stylesheet is provided under `lib/styles.css`, or you may customize your own theme. This URL is rendered in an iframe, so it must be a fully qualified URL.
 
 #### `mediauploader_button_image`
 
