@@ -94,3 +94,7 @@ This is the message that appears if the user attempts to paste an invalid URL. T
 #### `mediauploader_msg_invalid_media`
 
 This is the message that appears if the user attempts to embed an unsupported media type. The default is `"That doesn't appear to be an embeddable URL"`.
+
+## License
+
+MIT
